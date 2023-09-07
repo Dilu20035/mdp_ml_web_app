@@ -25,7 +25,7 @@ with st.sidebar:
     
     selected = option_menu('Multiple Disease Detection System',
                           
-                          [''  'HOME PAGE',
+                          ['ㅤHOME PAGE',
                               'Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
@@ -37,13 +37,13 @@ st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE 
 
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
-if (selected == '  HOME PAGE'):
+if (selected == 'HOME PAGE'):
     st.title('   HOME PAGE   ')
     st.title(' ')
     st.title(' ')
-    st.text('> Diabetes Prediction')
-    st.text('> Heart Disease Prediction')
-    st.text('> Parkinsons Prediction')
+    st.text(' > Diabetes Prediction')
+    st.text(' > Heart Disease Prediction')
+    st.text(' > Parkinsons Prediction')
     st.title(' ')
 
 
