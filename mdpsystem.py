@@ -39,15 +39,6 @@ st.markdown("<h2 style='text-align: center; color: black;'>Smaller headline in b
 
 if (selected == '  HOME PAGE'):
     st.title('   HOME PAGE   ')
-title_alignment=
-"""
-<style>
-#the-title {
-  text-align: center
-}
-</style>
-"""
-st.markdown(title_alignment, unsafe_allow_html=True)
     st.title(' ')
     st.title(' ')
     st.text('> Diabetes Prediction')
