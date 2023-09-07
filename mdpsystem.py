@@ -36,7 +36,7 @@ with st.sidebar:
     
 #Home page
 st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center; color: black; font: bold;'>---------------------</h1>", unsafe_allow_html=True)
+st.text("<h1 style='text-align: center; color: black; '>---------------------</h1>", unsafe_allow_html=True)
 
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
