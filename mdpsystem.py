@@ -26,8 +26,6 @@ st.set_page_config(
 
 # sidebar for navigation
 with st.sidebar:
-    message("My message") 
-message("Hello bot!", is_user=True)  # align's the message to the right
     
     selected = option_menu('Multiple Disease Detection System',
                           
@@ -51,6 +49,9 @@ if (selected == 'ㅤㅤㅤHOME PAGE'):
     st.text(' > Heart Disease Prediction')
     st.text(' > Parkinsons Prediction')
     st.title(' ')
+
+message("My message") 
+message("Hello bot!", is_user=True)  # align's the message to the right
     
 
 # Diabetes Prediction Page
