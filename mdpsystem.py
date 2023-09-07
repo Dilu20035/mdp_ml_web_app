@@ -25,7 +25,7 @@ with st.sidebar:
     
     selected = option_menu('Multiple Disease Detection System',
                           
-                          ['HOME PAGE',
+                          ['  HOME PAGE',
                               'Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
@@ -33,12 +33,27 @@ with st.sidebar:
                           default_index=0)
     
 #Home page
-if (selected == 'HOME PAGE'):
-    st.title('HOME PAGE')
+st.markdown("<h1 style='text-align: center; color: grey;'>Big headline</h1>", unsafe_allow_html=True)
+
+st.markdown("<h2 style='text-align: center; color: black;'>Smaller headline in black </h2>", unsafe_allow_html=True)
+
+if (selected == '  HOME PAGE'):
+    st.title('   HOME PAGE   ')
+title_alignment=
+"""
+<style>
+#the-title {
+  text-align: center
+}
+</style>
+"""
+st.markdown(title_alignment, unsafe_allow_html=True)
     st.title(' ')
-    st.text('Diabetes Prediction')
-    st.text('Heart Disease Prediction')
-    st.text('Parkinsons Prediction')
+    st.title(' ')
+    st.text('> Diabetes Prediction')
+    st.text('> Heart Disease Prediction')
+    st.text('> Parkinsons Prediction')
+    st.title(' ')
 
 
 # Diabetes Prediction Page
