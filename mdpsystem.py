@@ -6,6 +6,10 @@ from streamlit_option_menu import option_menu
 from streamlit_chat import message
 
 
+message("My message") 
+message("Hello bot!", is_user=True)  # align's the message to the right
+
+
 
 # loading the saved models
 
@@ -49,9 +53,6 @@ if (selected == 'ㅤㅤㅤHOME PAGE'):
     st.text(' > Heart Disease Prediction')
     st.text(' > Parkinsons Prediction')
     st.title(' ')
-
-message("My message") 
-message("Hello bot!", is_user=True)  # align's the message to the right
     
 
 # Diabetes Prediction Page
