@@ -25,13 +25,19 @@ with st.sidebar:
     
     selected = option_menu('Multiple Disease Detection System',
                           
-                          ['Diabetes Prediction',
+                          ['HOME PAGE',
+                              'Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['activity','heart','person'],
+                          icons=['home','activity','heart','person'],
                           default_index=0)
     
-    
+#Home page
+if (selected == 'HOME PAGE'):
+    st.title('HOME PAGE')
+    st.paragraph('Diabetes Prediction using ML')
+
+
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
     
