@@ -3,6 +3,8 @@
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
+from streamlit_chat import message
+
 
 
 # loading the saved models
@@ -24,6 +26,8 @@ st.set_page_config(
 
 # sidebar for navigation
 with st.sidebar:
+    message("My message") 
+message("Hello bot!", is_user=True)  # align's the message to the right
     
     selected = option_menu('Multiple Disease Detection System',
                           
@@ -36,7 +40,6 @@ with st.sidebar:
     
 #Home page
 st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
-print(' {:s}'.format('u0332'.join('This is an underlined headline.')))
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
 if (selected == 'ㅤㅤㅤHOME PAGE'):
