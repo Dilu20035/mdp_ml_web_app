@@ -35,7 +35,7 @@ with st.sidebar:
     
 #Home page
 
-st.markdown("<h1 style='text-align: center; color: white; font: bold; color: black;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font: bold; color: black;'>MULTIPLE DISEASE DETECTOR</h1><h1 style='text-align: center; font: bold; color: white;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
     
 
