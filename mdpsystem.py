@@ -33,7 +33,6 @@ st.set_page_config(
     page_title="MDP-Detector",
     page_icon="🧊",
     layout="wide",
-    theme="dark",
     initial_sidebar_state="expanded",
 )
 st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
