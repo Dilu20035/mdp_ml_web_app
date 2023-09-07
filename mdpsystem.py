@@ -13,8 +13,12 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-st.set_page_config(
-    page_title="Ex-stream-ly Cool App",
+
+
+# sidebar for navigation
+with st.sidebar:
+    st.set_page_config(
+    page_title="MDP-Detector",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -24,10 +28,6 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-
-
-# sidebar for navigation
-with st.sidebar:
     
     selected = option_menu('Multiple Disease Detection System',
                           
