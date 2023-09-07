@@ -14,7 +14,12 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-
+st.set_page_config(
+    page_title="MDP-Detector",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
 # sidebar for navigation
 with st.sidebar:
@@ -29,12 +34,7 @@ with st.sidebar:
                           default_index=0)
     
 #Home page
-st.set_page_config(
-    page_title="MDP-Detector",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
+
 st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
     
