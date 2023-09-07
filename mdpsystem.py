@@ -35,7 +35,7 @@ with st.sidebar:
                               'Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['car','activity','heart','person'],
+                          icons=['⌂','activity','heart','person'],
                           default_index=0)
     
 #Home page
