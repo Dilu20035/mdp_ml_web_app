@@ -13,7 +13,7 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-    st.set_page_config(
+st.set_page_config(
     page_title="MDP-Detector",
     page_icon="🧊",
     layout="wide",
