@@ -34,7 +34,7 @@ st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction He
 
 if (selected == 'ㅤHOME PAGE'):
     st.title(' ')
-    st.title("<h3 style='text-align: center; color: black; font: underline;'>HOME PAGE</h3>")
+    st.title("<h3 style='text-align: center; color: black; font: italic;'>HOME PAGE</h3>",unsafe_allow_html=True)
     st.title(' ')
     st.title(' ')
     st.text(' > Diabetes Prediction')
