@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun May  8 21:01:15 2022
-
-@author: siddhardhan
-"""
 
 import pickle
 import streamlit as st
@@ -37,7 +32,7 @@ st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE 
 
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
-if (selected == 'HOME PAGE'):
+if (selected == 'ㅤHOME PAGE'):
     st.title('   HOME PAGE   ')
     st.title(' ')
     st.title(' ')
