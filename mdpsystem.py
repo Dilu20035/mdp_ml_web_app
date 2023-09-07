@@ -33,7 +33,8 @@ st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE 
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
 if (selected == 'ㅤHOME PAGE'):
-    st.title('   HOME PAGE   ')
+    st.title(' ')
+    st.title("<h3 style='text-align: center; color: black; font: underline;'>HOME PAGE</h3>")
     st.title(' ')
     st.title(' ')
     st.text(' > Diabetes Prediction')
