@@ -36,8 +36,7 @@ with st.sidebar:
     
 #Home page
 st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
-st.header('---------------------')
-
+print(' {:s}'.format('u0332'.join('This is an underlined headline.')))
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
 if (selected == 'ㅤㅤㅤHOME PAGE'):
