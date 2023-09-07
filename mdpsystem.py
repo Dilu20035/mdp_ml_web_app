@@ -43,7 +43,6 @@ if (selected == 'ㅤㅤㅤHOME PAGE'):
     st.title('  ')
     st.title('Home Page')
     st.title(' ')
-    st.title(' ')
     st.text(' > Diabetes Prediction')
     st.text(' > Heart Disease Prediction')
     st.text(' > Parkinsons Prediction')
