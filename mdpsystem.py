@@ -6,6 +6,7 @@ Created on Sun May  8 21:01:15 2022
 """
 
 import pickle
+import docs
 import streamlit as st
 from streamlit_option_menu import option_menu
 
@@ -33,9 +34,10 @@ with st.sidebar:
                           default_index=0)
     
 #Home page
+doc = docx.Document()
 if (selected == 'HOME PAGE'):
     st.title('HOME PAGE')
-    st.paragraph('Diabetes Prediction using ML')
+    doc.paragraph('Diabetes Prediction using ML')
 
 
 # Diabetes Prediction Page
