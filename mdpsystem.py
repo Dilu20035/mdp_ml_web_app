@@ -25,7 +25,7 @@ with st.sidebar:
     
     selected = option_menu('Multiple Disease Detection System',
                           
-                          ['  HOME PAGE',
+                          [''  'HOME PAGE',
                               'Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
@@ -33,7 +33,7 @@ with st.sidebar:
                           default_index=0)
     
 #Home page
-st.markdown("<h1 style='text-align: center; color: black; font: bold;'>Multiple Disease Detector</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
 
 st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
@@ -42,7 +42,6 @@ if (selected == '  HOME PAGE'):
     st.title(' ')
     st.title(' ')
     st.text('> Diabetes Prediction')
-    diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
     st.text('> Heart Disease Prediction')
     st.text('> Parkinsons Prediction')
     st.title(' ')
