@@ -37,10 +37,10 @@ with st.sidebar:
                           default_index=0)
     
 #Home page
+st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=False)
+    st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
 
 if (selected == 'ㅤㅤㅤHOME PAGE'):
-    st.markdown("<h1 style='text-align: center; color: black; font: bold;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
-    st.markdown("<h2 style='text-align: center; color: grey;'>Accurate Prediction Helps To Beware</h2>", unsafe_allow_html=True)
     st.title(' ')
     st.title('Home Page')
     st.title(' ')
