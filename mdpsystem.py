@@ -6,7 +6,7 @@ Created on Sun May  8 21:01:15 2022
 """
 
 import pickle
-import docs
+import docx
 import streamlit as st
 from streamlit_option_menu import option_menu
 
