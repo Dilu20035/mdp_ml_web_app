@@ -25,7 +25,7 @@ with st.sidebar:
     
     selected = option_menu('Multiple Disease Detection System',
                           
-                          ['ㅤㅤㅤHome',
+                          ['Home',
                               'Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction',
@@ -39,7 +39,7 @@ st.markdown("<h3 style='text-align: center; color: grey;'>Don’t let diseases c
 st.markdown("<h1 style='text-align: center;'>                           </h1>", unsafe_allow_html=True)
     
 
-if (selected == 'ㅤㅤㅤHOME PAGE'):
+if (selected == 'Home'):
     st.title('  ')
     st.title('Home Page')
     st.title(' ')
@@ -282,6 +282,16 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person has Parkinson's disease"
         else:
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
+
+    
+if (selected == 'About'):
+    st.title("About")
+    st.markdown("""
+    - Our project, titled **'Multiple Disease Prediction System,'** is a machine learning-based system designed to predict diseases such as diabetes, heart disease, and Parkinson's disease. To achieve this, we employed various algorithms, including K-Nearest Neighbors (KNN), Random Forest, Naive Bayes, Logistic Regression, and Support Vector Machines (SVM), for classification. These algorithms were utilized to predict the disease based on the available dataset.
+    - The aim of our project is to help individuals predict diseases with accuracy, which can enable them to take necessary precautions and reduce the risks of contracting such diseases. We developed the project for learning purposes, with the aim of improving it further in the future.
+    - To make our project accessible and user-friendly, we deployed it using Streamlit, an open-source app framework used for building web applications. This deployment enables individuals to use our system with ease and access the predictions on the go.
+    - In conclusion, our project is an innovative machine learning-based system designed to predict multiple diseases with high accuracy using various algorithms. With its deployment on Streamlit, individuals can access the system easily and use it to predict diseases, which can help them take necessary precautions and reduce the risks of contracting such diseases.
+      """)
         
     st.success(parkinsons_diagnosis)
 
