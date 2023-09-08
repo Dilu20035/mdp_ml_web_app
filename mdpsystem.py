@@ -18,7 +18,6 @@ st.set_page_config(
     page_title="MDP-Detector",
     page_icon="🧊",
     layout="wide",
-    initial_sidebar_state="expanded",
 )
 
 # sidebar for navigation
