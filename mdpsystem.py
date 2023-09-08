@@ -41,12 +41,6 @@ st.markdown("<h1 style='text-align: center;'>                           </h1>", 
 
 if (selected == 'Home'):
     st.title('  ')
-    st.title('Home Page')
-    st.title(' ')
-    st.text(' > Diabetes Prediction')
-    st.text(' > Heart Disease Prediction')
-    st.text(' > Parkinsons Prediction')
-    st.title(' ')
     image = Image.open("image.png")
     st.image(image, use_column_width=True)
     st.markdown("""
@@ -282,6 +276,9 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person has Parkinson's disease"
         else:
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
+            
+        st.success(parkinsons_diagnosis)
+
 
     
 if (selected == 'About'):
@@ -292,7 +289,8 @@ if (selected == 'About'):
     - To make our project accessible and user-friendly, we deployed it using Streamlit, an open-source app framework used for building web applications. This deployment enables individuals to use our system with ease and access the predictions on the go.
     - In conclusion, our project is an innovative machine learning-based system designed to predict multiple diseases with high accuracy using various algorithms. With its deployment on Streamlit, individuals can access the system easily and use it to predict diseases, which can help them take necessary precautions and reduce the risks of contracting such diseases.
       """)
+    
         
-    st.success(parkinsons_diagnosis)
+    
 
 
