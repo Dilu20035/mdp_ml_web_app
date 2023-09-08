@@ -35,7 +35,7 @@ with st.sidebar:
     
 #Home page
 st.markdown("<h1 style='text-align: center; font: bold; color: 0e1117;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center; color: grey;'>Don’t let diseases catch you off guard</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: grey;'>[Don’t let diseases catch you off guard]</h3>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center;'>                           </h1>", unsafe_allow_html=True)
     
 
@@ -277,7 +277,7 @@ if (selected == "Parkinsons Prediction"):
         else:
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
             
-        st.success(parkinsons_diagnosis)
+    st.success(parkinsons_diagnosis)
 
 
     
