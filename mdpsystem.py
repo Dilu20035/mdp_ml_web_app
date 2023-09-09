@@ -51,7 +51,7 @@ with st.sidebar:
                            'Parkinsons Prediction',
                            'Covid Prediction',
                           'About'],
-                          icons=['house-fill','activity','heart','person','lungs','bi-info-circle-fill'],
+                          icons=['house-fill','activity','heart','person','asterisk','bi-info-circle-fill'],
                           default_index=0)
     
 #Home page
