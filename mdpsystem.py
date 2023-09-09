@@ -79,12 +79,19 @@ if (selected == 'Home'):
         - Symptoms of heart disease can vary depending on the type of condition but may include chest pain or discomfort, shortness of breath, fatigue, dizziness, nausea, and sweating. It is important to seek medical attention if you experience any of these symptoms.
         - In conclusion, heart disease is a group of conditions that affect the heart and blood vessels and can lead to serious complications. Lifestyle changes and medical care can help prevent and manage heart disease, but it is important to be aware of the symptoms and seek medical attention if necessary.
         
-        ## Parkinsons Disease:
+        ## Parkinson's Disease:
 
         - Parkinson's disease is a progressive neurological disorder that affects movement. It occurs when the brain cells that produce the neurotransmitter dopamine are damaged or destroyed, leading to a decrease in dopamine levels. Dopamine is a chemical messenger that helps to control movement and coordination.
         - The symptoms of Parkinson's disease can vary from person to person but typically include tremors, stiffness, slowness of movement, and difficulty with balance and coordination. As the disease progresses, it can also cause cognitive and behavioral changes, including memory loss and depression.
         - While the cause of Parkinson's disease is not fully understood, it is believed to involve a combination of genetic and environmental factors. There is currently no cure for Parkinson's disease, but medications and therapies can help to manage symptoms and improve quality of life. These may include dopamine replacement therapy, physical therapy, and deep brain stimulation.
         - In conclusion, Parkinson's disease is a progressive neurological disorder that affects movement and coordination. While there is no cure for the disease, medications and therapies can help to manage symptoms and improve quality of life. Support and resources are available to help individuals and their families cope with the challenges of living with Parkinson's disease.
+
+        ## Covid Disease:
+
+        - COVID-19, formally known as Coronavirus Disease 2019, is a highly contagious respiratory illness caused by the novel coronavirus SARS-CoV-2, which was first identified in Wuhan, China, in late 2019. This disease quickly spread globally, resulting in a pandemic that continues to affect populations worldwide.
+        - The symptoms of COVID-19 can range from mild to severe and may include fever, cough, shortness of breath, fatigue, body aches, sore throat, loss of taste or smell, and gastrointestinal symptoms. Severe cases can lead to pneumonia, acute respiratory distress syndrome (ARDS), and even death, particularly among older adults and individuals with underlying health conditions.
+        - The primary mode of transmission for COVID-19 is through respiratory droplets generated when an infected person coughs, sneezes, talks, or even breathes. The virus can also spread through contact with contaminated surfaces and subsequent hand-to-face contact. Understanding these modes of transmission has led to the widespread adoption of preventive measures such as mask-wearing, social distancing, frequent handwashing, and vaccination campaigns to curb the spread of the virus.
+        - In conclusion, COVID-19 has presented an unprecedented global challenge, impacting public health, economies, and daily life. While vaccines have emerged as a critical tool in controlling the pandemic, ongoing research and vigilance in adhering to public health guidelines remain crucial in our efforts to manage and eventually overcome this disease. COVID-19 has highlighted the importance of global collaboration in the face of health crises and serves as a reminder of the need for preparedness in the face of emerging infectious diseases.
         """)
 
     
