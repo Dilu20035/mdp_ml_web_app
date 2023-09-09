@@ -51,7 +51,7 @@ with st.sidebar:
                            'Parkinsons Prediction',
                            'Covid Prediction',
                           'About'],
-                          icons=['house-fill','activity','heart','person','line','bi-info-circle-fill'],
+                          icons=['house-fill','activity','heart','person','lungs','bi-info-circle-fill'],
                           default_index=0)
     
 #Home page
@@ -304,7 +304,7 @@ if (selected == "Parkinsons Prediction"):
 if (selected == 'Covid Prediction'):
     
     # page title
-    st.title('Corona Prediction')
+    st.title('Covid Prediction Using ML')
     
     
     # getting the input data from the user
