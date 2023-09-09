@@ -1,7 +1,16 @@
 # mdp_ml_web_app
 
-Multiple Disease Detector for Predicting Humans
-Chronic Diseases Using Machine Learning
+A multiple disease detector web-application that predicts covid, diabetes, parkinson's disease and heart disease using various machine learning algorithms. It is deployed on streamlit. To run locally:
+
+Download the zip file
+Run the mdpsystem.py folder using command streamlit run mdpsystem.py
+To run on streamlit cloud, check the link below
+
+https://multiplediseasedetector.streamlit.app/
+
+
+
+# Multiple Disease Detector for Predicting Humans Chronic Diseases Using Machine Learning
 
 
 This paper proposes a Multiple Disease Detector is a web based application for predicting
