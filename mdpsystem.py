@@ -17,7 +17,8 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 st.set_page_config(
     page_title="MDP-Detector",
     page_icon="🧊",
-    layout="wide",
+    layout="centered",
+    initial_sidebar_state="auto",
 )
 
 # sidebar for navigation
