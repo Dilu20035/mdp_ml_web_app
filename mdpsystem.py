@@ -3,6 +3,7 @@
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
+import time
 from PIL import Image
 
 
@@ -16,9 +17,25 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
 st.set_page_config(
     page_title="MDP-Detector",
-    page_icon="🧊",
+    page_icon="❤️‍🩹",
     layout="centered",
     initial_sidebar_state="auto",
+)
+
+# Set the theme colors
+st.markdown(
+    """
+    <style>
+    :root {
+        --primary-color: #B21F33;
+        --background-color: #002b36;
+        --secondary-background-color: #586e75;
+        --text-color: #fafafa;
+        --font: sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
 # sidebar for navigation
