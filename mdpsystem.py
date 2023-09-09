@@ -15,6 +15,8 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
+covid_model = pickle.load(open("covid.pkl", 'rb'))
+
 st.set_page_config(
     page_title="MDP-Detector",
     page_icon="❤️‍🩹",
@@ -47,8 +49,9 @@ with st.sidebar:
                               'Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction',
+                           'Covid Prediction',
                           'About'],
-                          icons=['house-fill','activity','heart','person','bi-info-circle-fill'],
+                          icons=['house-fill','activity','heart','person','line','bi-info-circle-fill'],
                           default_index=0)
     
 #Home page
@@ -296,6 +299,64 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
             
     st.success(parkinsons_diagnosis)
+
+# CORONA Prediction Page
+if (selected == 'Covid Prediction'):
+    
+    # page title
+    st.title('Corona Prediction')
+    
+    
+    # getting the input data from the user
+    col1, col2= st.columns(2)
+    
+    with col1:
+        cough = st.selectbox( 'Cough : 0 FOR NO, 1 FOR YES ',
+          ('0', '1'))
+    
+    with col2:
+        fever = st.selectbox( 'Fever: 0 FOR NO, 1 FOR YES',
+          ('0', '1'))
+    
+    with col1:
+       sore_throat =st.selectbox( 'Sore throat: 0 FOR NO, 1 FOR YES',
+          ('0', '1'))
+    
+    with col2:
+        shortness_of_breath = st.selectbox( 'Shortness of breath: 0 FOR NO, 1 FOR YES',
+          ('0', '1'))
+    
+    with col1:
+        head_ache = st.selectbox( 'Head ache: 0 FOR NO, 1 FOR YES',
+          ('0', '1'))
+    
+    with col2:
+        age_60_and_above = st.selectbox( 'Age 60 and above: 0 FOR NO, 1 FOR YES',
+          ('0', '1'))
+    
+    with col1:
+        gender = st.selectbox( 'Gender: 0 FOR M, 1 FOR F',
+          ('0', '1'))
+    
+    with col2:
+        test_indication = st.selectbox( 'Test indication: 0 FOR ABROAD, 1 FOR CONTACT, 2 FOR OTHER',
+          ('0', '1','2'))
+    
+    
+    # code for Prediction
+    covid_diagnosis = ''
+    
+    # creating a button for Prediction
+    
+    if st.button('Corona Test Result'):
+        Covid_Prediction = covid_model.predict([[cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,test_indication]])
+        
+        if (Covid_Prediction[0] == 1):
+          covid_diagnosis = 'The person has covid'
+        else:
+          covid_diagnosis = 'The person does not have covid'
+        
+    st.success(covid_diagnosis)
 
 
     
