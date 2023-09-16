@@ -39,11 +39,10 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-with st.sidebar:
-    my_component(greeting="hello")
+
 # sidebar for navigation
 with st.sidebar:
-    
+    my_component(greeting="hello")
     selected = option_menu('Multiple Disease Detection System',
                           
                           ['Home',
