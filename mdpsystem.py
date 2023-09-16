@@ -5,7 +5,6 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import time
 from PIL import Image
-from st_aggrid import AgGrid
 
 
 # loading the saved models
@@ -42,7 +41,7 @@ st.markdown(
 )
 # sidebar for navigation
 with st.sidebar:
-     my_component(greeting="hello")
+    st.write("Hello, Welcome!!")
     selected = option_menu('Multiple Disease Detection System',
                           
                           ['Home',
