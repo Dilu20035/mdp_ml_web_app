@@ -43,7 +43,6 @@ st.markdown(
 # sidebar for navigation
 with st.sidebar:
     st.title("Hello, Welcome!!")
-    add_sidebar = st.sidebar.selectbox ('Menu', ('Main', 'Drink', 'Desert', 'Appetizer'))
     selected = option_menu('Multiple Disease Detection System',     
                           ['Home',
                               'Diabetes Prediction',
