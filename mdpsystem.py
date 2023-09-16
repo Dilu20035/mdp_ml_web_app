@@ -5,6 +5,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import time
 from PIL import Image
+from st_aggrid import AgGrid
 
 
 # loading the saved models
@@ -41,6 +42,7 @@ st.markdown(
 )
 # sidebar for navigation
 with st.sidebar:
+     my_component(greeting="hello")
     selected = option_menu('Multiple Disease Detection System',
                           
                           ['Home',
@@ -51,7 +53,6 @@ with st.sidebar:
                           'About'],
                           icons=['house-fill','activity','heart','person','asterisk','bi-info-circle-fill'],
                           default_index=0)
-     my_component(greeting="hello")
     
 #Home page
 st.markdown("<h1 style='text-align: center; font: bold; color: 0e1117;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
