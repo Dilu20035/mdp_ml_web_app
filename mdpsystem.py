@@ -41,8 +41,8 @@ st.markdown(
 )
 # sidebar for navigation
 with st.sidebar:
-    st.title("Hello, Welcome!!" ,layout="centered")
-    selected = option_menu('Multiple Disease Detection System',
+    selected = option_menu(st.title("Hello, Welcome!!"),
+        'Multiple Disease Detection System',
                           
                           ['Home',
                               'Diabetes Prediction',
