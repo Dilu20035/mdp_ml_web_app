@@ -42,8 +42,7 @@ st.markdown(
 
 # sidebar for navigation
 with st.sidebar:
-    with st.echo():
-        st.write("This code will be printed to the sidebar.")
+    st.button("Click me")
     st.title("Hello, Welcome!!")
     selected = option_menu('Multiple Disease Detection System',     
                           ['Home',
