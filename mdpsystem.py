@@ -62,7 +62,7 @@ st.markdown("<h1 style='text-align: center;'>                           </h1>", 
 if (selected == 'Home'):
     st.title('  ')
     image = Image.open("image.png")
-    st.image(image, use_column_width=True)
+    st.image(image, use_column_width=False)
     st.markdown("""
         ## Diabetes:
 
