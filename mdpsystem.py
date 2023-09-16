@@ -39,9 +39,12 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 # sidebar for navigation
 with st.sidebar:
-    st.markdown("Hello, Welcome!!")
+    with st.echo():
+        st.write("This code will be printed to the sidebar.")
+    st.title("Hello, Welcome!!")
     selected = option_menu('Multiple Disease Detection System',     
                           ['Home',
                               'Diabetes Prediction',
