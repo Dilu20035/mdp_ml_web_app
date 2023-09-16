@@ -5,8 +5,6 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import time
 from PIL import Image
-from st_pages import Page, show_pages, add_page_title
-
 
 
 # loading the saved models
@@ -24,17 +22,6 @@ st.set_page_config(
     page_icon=":White Flower:",
     layout="centered",
     initial_sidebar_state="auto",
-)
-# Optional -- adds the title and icon to the current page
-add_page_title()
-
-# Specify what pages should be shown in the sidebar, and what their titles and icons
-# should be
-show_pages(
-    [
-        Page("streamlit_app.py", "Home", "🏠"),
-        Page("other_pages/page2.py", "Page 2", ":books:"),
-    ]
 )
 
 # Set the theme colors
