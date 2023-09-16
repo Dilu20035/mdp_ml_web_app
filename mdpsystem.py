@@ -19,8 +19,8 @@ covid_model = pickle.load(open("covid.pkl", 'rb'))
 
 st.set_page_config(
     page_title="MDP-Detector",
-    page_icon=":White Flower:",
-    layout="centered",
+    page_icon=":shark:",
+    layout="wide",
     initial_sidebar_state="auto",
 )
 
@@ -62,7 +62,7 @@ st.markdown("<h1 style='text-align: center;'>                           </h1>", 
 if (selected == 'Home'):
     st.title('  ')
     image = Image.open("image.png")
-    st.image(image, use_column_width=False)
+    st.image(image, use_column_width=True)
     st.markdown("""
         ## Diabetes:
 
