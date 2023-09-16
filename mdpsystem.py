@@ -23,6 +23,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="auto",
 )
+st.snow()
 
 # Set the theme colors
 st.markdown(
@@ -42,7 +43,6 @@ st.markdown(
 
 # sidebar for navigation
 with st.sidebar:
-    st.snow()
     st.title("Hello, Welcome!!")
     selected = option_menu('Multiple Disease Detection System',     
                           ['Home',
