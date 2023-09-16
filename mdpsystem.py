@@ -19,7 +19,7 @@ covid_model = pickle.load(open("covid.pkl", 'rb'))
 
 st.set_page_config(
     page_title="MDP-Detector",
-    page_icon=":shark:",
+    page_icon=":Shark:",
     layout="wide",
     initial_sidebar_state="auto",
 )
