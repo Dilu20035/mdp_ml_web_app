@@ -19,9 +19,14 @@ covid_model = pickle.load(open("covid.pkl", 'rb'))
 
 st.set_page_config(
     page_title="MDP-Detector",
-    page_icon="❤️‍🩹",
-    layout="centered",
-    initial_sidebar_state="auto",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
 )
 
 # Set the theme colors
