@@ -39,10 +39,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-col1, col2 = st.columns(2)
-with col2:
-    my_component(greeting="hello")
 # sidebar for navigation
 with st.sidebar:
     selected = option_menu('Multiple Disease Detection System',
@@ -55,6 +51,7 @@ with st.sidebar:
                           'About'],
                           icons=['house-fill','activity','heart','person','asterisk','bi-info-circle-fill'],
                           default_index=0)
+     my_component(greeting="hello")
     
 #Home page
 st.markdown("<h1 style='text-align: center; font: bold; color: 0e1117;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
