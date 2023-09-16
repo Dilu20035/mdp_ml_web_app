@@ -41,7 +41,7 @@ st.markdown(
 )
 # sidebar for navigation
 with st.sidebar:
-    st.write("Hello, Welcome!!")
+    st.header("Hello, Welcome!!")
     selected = option_menu('Multiple Disease Detection System',
                           
                           ['Home',
