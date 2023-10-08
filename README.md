@@ -13,8 +13,6 @@ https://multiplediseasedetector.streamlit.app/
 # Multiple Disease Detector for Predicting Humans Chronic Diseases Using Machine Learning
 
 
-![Uploading image.png…]()
-
 
 This paper proposes a Multiple Disease Detector is a web based application for predicting
 humans long term illnesses like Diabetes, Heart Disease, Parkinson's Disease,...etc,
