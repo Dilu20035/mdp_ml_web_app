@@ -360,7 +360,7 @@ if (selected == 'Covid Prediction'):
         if (Covid_Prediction[0] == 1):
           st.success(covid_diagnosis = 'The person has covid')
         else:
-          st.failure(covid_diagnosis = 'The person does not have covid')
+          st.success(covid_diagnosis = 'The person does not have covid')
 
 
     
