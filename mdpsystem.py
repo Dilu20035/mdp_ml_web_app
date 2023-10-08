@@ -308,9 +308,10 @@ if (selected == "Parkinsons Prediction"):
 
 # CORONA Prediction Page
 
-st.title(' ')
+
 if (selected == 'Covid Prediction'):
-    
+    st.title(' ')
+    st.title(' ')
     # page title
     st.title('Covid Prediction Using ML')
     
