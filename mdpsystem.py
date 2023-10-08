@@ -307,6 +307,8 @@ if (selected == "Parkinsons Prediction"):
     st.success(parkinsons_diagnosis)
 
 # CORONA Prediction Page
+
+st.title(' ')
 if (selected == 'Covid Prediction'):
     
     # page title
