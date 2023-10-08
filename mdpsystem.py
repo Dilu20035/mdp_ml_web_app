@@ -363,6 +363,7 @@ if (selected == 'Covid Prediction'):
           covid_diagnosis = 'The person does not have covid'
         
     st.success(covid_diagnosis)
+    st.failure(covid_diagnosis)
 
 
     
