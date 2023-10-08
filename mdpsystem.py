@@ -358,12 +358,9 @@ if (selected == 'Covid Prediction'):
         Covid_Prediction = covid_model.predict([[cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,test_indication]])
         
         if (Covid_Prediction[0] == 1):
-          covid_diagnosis = 'The person has covid'
+          st.success(covid_diagnosis = 'The person has covid')
         else:
-          covid_diagnosis = 'The person does not have covid'
-        
-    st.success(covid_diagnosis)
-    st.failure(covid_diagnosis)
+          st.failure(covid_diagnosis = 'The person does not have covid')
 
 
     
