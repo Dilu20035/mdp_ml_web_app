@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
+"""
+Created on Sun May 22 11:53:51 2022
+
+@author: siddhardhan
+"""
 
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
-import time
-from PIL import Image
 
 
 # loading the saved models
@@ -17,84 +20,20 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
 covid_model = pickle.load(open("covid.pkl", 'rb'))
 
-st.set_page_config(
-    page_title="MDP-Detector",
-    page_icon=":Shark:",
-    layout="centered",
-    initial_sidebar_state="auto",
-)
-
-# Set the theme colors
-st.markdown(
-    """
-    <style>
-    :root {
-        --primary-color: #B21F33;
-        --background-color: #002b36;
-        --secondary-background-color: #586e75;
-        --text-color: #fafafa;
-        --font: sans-serif;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # sidebar for navigation
 with st.sidebar:
-    st.title("Hello, Welcome!!")
-    selected = option_menu('Multiple Disease Detection System',     
-                          ['Home',
-                              'Diabetes Prediction',
+    
+    selected = option_menu('Multiple Disease Prediction System',
+                          
+                          ['Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction',
-                           'Covid Prediction',
-                          'About'],
-                          icons=['house-fill','activity','heart','person','asterisk','bi-info-circle-fill'],
+                           'Covid Prediction'],
+                          icons=['activity','heart','person'],
                           default_index=0)
     
-#Home page
-st.markdown("<h1 style='text-align: center; font: bold; color: 0e1117;'>MULTIPLE DISEASE DETECTOR</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center; color: grey;'>[Don’t let diseases catch you off guard]</h3>", unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center;'>                           </h1>", unsafe_allow_html=True)
     
-
-if (selected == 'Home'):
-    st.title('  ')
-    image = Image.open("image.png")
-    st.image(image, use_column_width=True)
-    st.markdown("""
-        ## Diabetes:
-
-        - Diabetes, also known as diabetes mellitus, is a chronic medical condition that occurs when the body is unable to properly regulate blood sugar levels. Blood sugar, or glucose, is the primary source of energy for the body's cells and tissues. However, in people with diabetes, the body cannot use glucose effectively, leading to high blood sugar levels.
-        - Diabetes can lead to a variety of complications, including damage to the eyes, kidneys, nerves, and cardiovascular system. It is therefore important for people with diabetes to manage their blood sugar levels and receive regular medical check-ups to prevent or manage any complications.
-        - Symptoms of diabetes include increased thirst and hunger, frequent urination, fatigue, blurred vision, and slow healing of cuts and bruises. However, some people with diabetes may not experience any symptoms at all, which is why regular screening is important, especially for individuals with risk factors such as a family history of diabetes, obesity, or a sedentary lifestyle.
-        - In conclusion, diabetes is a chronic medical condition that affects the body's ability to regulate blood sugar levels. It can lead to a variety of complications, but with proper management and medical care, people with diabetes can live full and healthy lives.
-
-        ## Heart Disease:
-
-        - Heart disease, also known as cardiovascular disease, is a group of conditions that affect the heart and blood vessels. It is one of the leading causes of death worldwide and includes conditions such as coronary artery disease, heart failure, and arrhythmias.
-        - Heart failure occurs when the heart is unable to pump blood effectively, leading to symptoms such as shortness of breath, fatigue, and swelling in the legs and ankles. Arrhythmias are abnormal heart rhythms that can cause the heart to beat too fast, too slow, or irregularly.
-        - Symptoms of heart disease can vary depending on the type of condition but may include chest pain or discomfort, shortness of breath, fatigue, dizziness, nausea, and sweating. It is important to seek medical attention if you experience any of these symptoms.
-        - In conclusion, heart disease is a group of conditions that affect the heart and blood vessels and can lead to serious complications. Lifestyle changes and medical care can help prevent and manage heart disease, but it is important to be aware of the symptoms and seek medical attention if necessary.
-        
-        ## Parkinson's Disease:
-
-        - Parkinson's disease is a progressive neurological disorder that affects movement. It occurs when the brain cells that produce the neurotransmitter dopamine are damaged or destroyed, leading to a decrease in dopamine levels. Dopamine is a chemical messenger that helps to control movement and coordination.
-        - The symptoms of Parkinson's disease can vary from person to person but typically include tremors, stiffness, slowness of movement, and difficulty with balance and coordination. As the disease progresses, it can also cause cognitive and behavioral changes, including memory loss and depression.
-        - While the cause of Parkinson's disease is not fully understood, it is believed to involve a combination of genetic and environmental factors. There is currently no cure for Parkinson's disease, but medications and therapies can help to manage symptoms and improve quality of life. These may include dopamine replacement therapy, physical therapy, and deep brain stimulation.
-        - In conclusion, Parkinson's disease is a progressive neurological disorder that affects movement and coordination. While there is no cure for the disease, medications and therapies can help to manage symptoms and improve quality of life. Support and resources are available to help individuals and their families cope with the challenges of living with Parkinson's disease.
-
-        ## Covid Disease:
-
-        - COVID-19, formally known as Coronavirus Disease 2019, is a highly contagious respiratory illness caused by the novel coronavirus SARS-CoV-2, which was first identified in Wuhan, China, in late 2019. This disease quickly spread globally, resulting in a pandemic that continues to affect populations worldwide.
-        - The symptoms of COVID-19 can range from mild to severe and may include fever, cough, shortness of breath, fatigue, body aches, sore throat, loss of taste or smell, and gastrointestinal symptoms. Severe cases can lead to pneumonia, acute respiratory distress syndrome (ARDS), and even death, particularly among older adults and individuals with underlying health conditions.
-        - The primary mode of transmission for COVID-19 is through respiratory droplets generated when an infected person coughs, sneezes, talks, or even breathes. The virus can also spread through contact with contaminated surfaces and subsequent hand-to-face contact. Understanding these modes of transmission has led to the widespread adoption of preventive measures such as mask-wearing, social distancing, frequent handwashing, and vaccination campaigns to curb the spread of the virus.
-        - In conclusion, COVID-19 has presented an unprecedented global challenge, impacting public health, economies, and daily life. While vaccines have emerged as a critical tool in controlling the pandemic, ongoing research and vigilance in adhering to public health guidelines remain crucial in our efforts to manage and eventually overcome this disease. COVID-19 has highlighted the importance of global collaboration in the face of health crises and serves as a reminder of the need for preparedness in the face of emerging infectious diseases.
-        """)
-
-    
-
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
     
@@ -303,7 +242,7 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person has Parkinson's disease"
         else:
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
-            
+        
     st.success(parkinsons_diagnosis)
 
 # CORONA Prediction Page
@@ -364,19 +303,3 @@ if (selected == 'Covid Prediction'):
           st.error('The person has covid')
         else:
           st.success('The person does not have covid')
-
-
-    
-if (selected == 'About'):
-    st.title("About")
-    st.markdown("""
-    - Our project, titled **'Multiple Disease Prediction System,'** is a machine learning-based system designed to predict diseases such as diabetes, heart disease, and Parkinson's disease. To achieve this, we employed various algorithms, including K-Nearest Neighbors (KNN), Random Forest, Naive Bayes, Logistic Regression, and Support Vector Machines (SVM), for classification. These algorithms were utilized to predict the disease based on the available dataset.
-    - The aim of our project is to help individuals predict diseases with accuracy, which can enable them to take necessary precautions and reduce the risks of contracting such diseases. We developed the project for learning purposes, with the aim of improving it further in the future.
-    - To make our project accessible and user-friendly, we deployed it using Streamlit, an open-source app framework used for building web applications. This deployment enables individuals to use our system with ease and access the predictions on the go.
-    - In conclusion, our project is an innovative machine learning-based system designed to predict multiple diseases with high accuracy using various algorithms. With its deployment on Streamlit, individuals can access the system easily and use it to predict diseases, which can help them take necessary precautions and reduce the risks of contracting such diseases.
-      """)
-    
-        
-    
-
-
