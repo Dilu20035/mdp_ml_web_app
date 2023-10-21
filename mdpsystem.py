@@ -43,28 +43,71 @@ with st.sidebar:
                            'Covid Prediction'],
                           icons=['activity','heart','person'],
                           default_index=0)
-    
 
-st.markdown("""
-<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
-    <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
-        <ul class="navbar-nav ">
+
+custom_html = """
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #ff5959; position: fixed; top: 0; width: 100%;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
+        <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link text-scroll" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
+                <a class="nav-link text-scroll" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link text-scroll" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>
 </nav>
-""", unsafe_allow_html=True)
+
+<style>
+    .navbar {
+        position: relative;
+    }
+
+    .navbar-toggler {
+        background-color: #ff5959;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    /* Style for the non-fixed text */
+    .text-scroll {
+        position: relative;
+        transition: color 0.3s;
+    }
+
+    .text-scroll:hover {
+        color: #your-desired-color; /* Change this to your desired text color */
+    }
+
+    @media (max-width: 768px) {
+        .navbar-toggler-icon {
+            background-color: #ff5959;
+        }
+
+        .navbar-collapse {
+            background-color: #ff5959;
+        }
+    }
+</style>
+"""
+
+st.markdown(custom_html, unsafe_allow_html=True)
 
 
 # Diabetes Prediction Page
