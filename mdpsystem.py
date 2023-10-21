@@ -29,6 +29,21 @@ st.set_page_config(
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 
+
+
+# sidebar for navigation
+with st.sidebar:
+    
+    selected = option_menu('Multiple Disease Prediction System',
+                          
+                          ['Diabetes Prediction',
+                           'Heart Disease Prediction',
+                           'Parkinsons Prediction',
+                           'Covid Prediction'],
+                          icons=['activity','heart','person'],
+                          default_index=0)
+    
+
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
     <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
@@ -50,20 +65,6 @@ st.markdown("""
 </nav>
 """, unsafe_allow_html=True)
 
-
-# sidebar for navigation
-with st.sidebar:
-    
-    selected = option_menu('Multiple Disease Prediction System',
-                          
-                          ['Diabetes Prediction',
-                           'Heart Disease Prediction',
-                           'Parkinsons Prediction',
-                           'Covid Prediction'],
-                          icons=['activity','heart','person'],
-                          default_index=0)
-    
-    
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
     
