@@ -46,7 +46,7 @@ with st.sidebar:
     
 
 st.markdown("""
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #ff5959; position: fixed; top: 0; width: 100%;">
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #ff5959;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -67,6 +67,50 @@ st.markdown("""
         </ul>
     </div>
 </nav>
+
+<style>
+    .navbar {
+        position: relative;
+    }
+
+    .navbar-toggler {
+        background-color: #ff5959;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    /* Style for the non-fixed text */
+    .text-scroll {
+        position: relative;
+        transition: color 0.3s;
+    }
+
+    .text-scroll:hover {
+        color: #your-desired-color; /* Change this to your desired text color */
+    }
+
+    @media (max-width: 768px) {
+        .navbar-toggler-icon {
+            background-color: #ff5959;
+        }
+
+        .navbar-collapse {
+            background-color: #ff5959;
+        }
+
+        /* Hide the text for mobile screens */
+        .nav-link {
+            display: none;
+        }
+    }
+</style>
+"""
 """, unsafe_allow_html=True)
 
 
