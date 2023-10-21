@@ -46,20 +46,23 @@ with st.sidebar:
     
 
 st.markdown("""
-<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959; position: fixed; top: 0; width: 100%;">
-    <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
-        <ul class="navbar-nav ">
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #ff5959; position: fixed; top: 0; width: 100%;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
+        <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost:8501/"><i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link text-scroll" href="http://localhost:8502/"><i class="fas fa-cogs"></i><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
+                <a class="nav-link text-scroll" href="http://localhost:8501/CONTACT"><i class="fas fa-envelope"></i><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link text-scroll" href="http://localhost:8501/ABOUT"><i class="fas fa-info-circle"></i><span class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>
