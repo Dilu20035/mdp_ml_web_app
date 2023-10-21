@@ -46,7 +46,7 @@ with st.sidebar:
     
 
 st.markdown("""
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #ff5959;">
+<nav class="navbar navbar-expand navbar-dark" style="background-color: #ff5959; position: fixed; top: 0; width: 100%;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
     </button>
