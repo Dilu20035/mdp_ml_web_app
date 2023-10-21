@@ -20,6 +20,26 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
 covid_model = pickle.load(open("covid.pkl", 'rb'))
 
+st.markdown("""
+<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
+    <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
+        <ul class="navbar-nav ">
+            <li class="nav-item active">
+                <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+""", unsafe_allow_html=True)
 
 # sidebar for navigation
 with st.sidebar:
