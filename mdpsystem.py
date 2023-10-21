@@ -29,7 +29,7 @@ st.set_page_config(
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 
-custom_html = """
+st.markdown("""
 <nav class="navbar navbar-fixed-top navbar-expand-md navbar-dark" style="background-color: #ff5959;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -89,9 +89,7 @@ custom_html = """
         }
     }
 </style>
-"""
-
-st.markdown(custom_html, unsafe_allow_html=True)
+""",unsafe_allow_html=True)
 
 
 
