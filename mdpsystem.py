@@ -30,7 +30,7 @@ st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootst
 
 
 st.markdown("""
-<nav class="navbar navbar-fixed-top navbar-expand-md navbar-dark" style="background-color: #ff5959;">
+<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
     </button>
