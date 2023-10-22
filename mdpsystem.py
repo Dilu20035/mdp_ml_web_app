@@ -52,13 +52,20 @@ with st.sidebar:
 
 # Define the HTML and JavaScript code for the responsive navbar
 
-
-
 st.markdown(
     """
     <style>
+    @media (max-width: 768px) {
+        .navbar-nav {
+            flex-direction: column;
+        }
+        .navbar-nav .nav-link {
+            padding: 10px 0;
+            text-align: center;
+        }
+    }
     .navbar-nav .nav-link:hover {
-        color: #fff;  /* Change the color to your desired hover color */
+        color: #ff5959;  /* Change the color to your desired hover color */
     }
     </style>
     """,
@@ -68,10 +75,13 @@ st.markdown(
 st.markdown(
     """
     <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
-        <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
-            <ul class="navbar-nav ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
@@ -88,6 +98,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
