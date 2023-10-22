@@ -53,7 +53,7 @@ with st.sidebar:
 
 # Define the navigation bar
 st.markdown("""
-<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
+<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959; border-radius: 10px;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
