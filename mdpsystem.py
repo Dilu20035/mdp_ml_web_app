@@ -45,6 +45,8 @@ with st.sidebar:
                           default_index=0)
 
 
+import streamlit as st
+
 html_code = """
 <style>
 .navbar {
@@ -103,9 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelectorAll(".nav-link");
 
-hamburger.addEventListener("click", function () {
-    navLinks.forEach(function (link) {
-    link.classList.toggle("active");
+    hamburger.addEventListener("click", function () {
+        navLinks.forEach(function (link) {
+            link.classList.toggle("active");
         });
     });
 });
