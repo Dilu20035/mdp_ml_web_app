@@ -50,6 +50,7 @@ with st.sidebar:
 
 
 
+# Define the HTML and JavaScript code for the responsive navbar
 html_code = """
 <style>
 .navbar {
@@ -58,6 +59,11 @@ html_code = """
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .nav-links {
@@ -127,7 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 """
 
+# Display the responsive navbar in the Streamlit app
 st.markdown(html_code, unsafe_allow_html=True)
+
 
 
 
