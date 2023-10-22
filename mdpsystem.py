@@ -60,11 +60,12 @@ st.markdown(
         background-color: #ff5959;
         display: flex;
         justify-content: center;
+        position: fixed;
     }
 
     .navbar-nav {
         list-style: none;
-        display: flex;
+        
     }
 
     .nav-item {
