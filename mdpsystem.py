@@ -53,95 +53,88 @@ with st.sidebar:
 # Define the HTML and JavaScript code for the responsive navbar
 
 
-html_code = """
-<style>
+
+st.markdown(
+    """
+    <style>
     .navbar {
         background-color: #ff5959;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-
-    .navbar-expand {
+        padding: 10px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .navbar-nav {
+    .nav-links {
         list-style: none;
         display: flex;
     }
 
-    .nav-item {
-        margin-right: 20px;
+    .nav-links li {
+        margin: 0 15px;
     }
 
-    .nav-link {
+    .nav-links a {
         text-decoration: none;
         color: #fff;
+        font-weight: bold;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
     }
 
     @media screen and (max-width: 768px) {
-        .navbar-toggler {
-            display: block;
-        }
-
-        .navbar-nav {
+        .nav-links {
             display: none;
             flex-direction: column;
-            text-align: center;
-            width: 100%;
             position: absolute;
-            top: 70px;
+            top: 60px;
             left: 0;
+            right: 0;
             background-color: #ff5959;
             padding: 10px;
         }
-        .nav-link {
-            display: block;
-            margin: 10px 0;
-        }
-        .navbar-nav.active {
+
+        .nav-links.active {
             display: flex;
         }
+
+        .hamburger {
+            display: block;
+        }
     }
-</style>
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-<nav class="navbar navbar-expand navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        &#9776;
-    </button>
-    <div class="navbar-nav" id="navbarNav">
-        <li class="nav-item active">
-            <a class="nav-link" href="http://localhost:8501/"><b> HOME </b></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b></a>
-        </li>
+st.markdown(
+    """
+    <div class="navbar">
+        <div class="hamburger">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="http://localhost:8501/"><b>HOME</b></a></li>
+            <li><a href="http://localhost:8502/" class="disabled"><b>MDP-SYSTEM</b></a></li>
+            <li><a href="http://localhost:8501/CONTACT" class="disabled"><b>CONTACT</b></a></li>
+            <li><a href="http://localhost:8501/ABOUT" class="disabled"><b>ABOUT</b></a></li>
+        </ul>
     </div>
-</nav>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const navbarNav = document.querySelector(".navbar-nav");
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
 
-    navbarToggler.addEventListener("click", function () {
-        navbarNav.classList.toggle("active");
+        hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
     });
-});
-</script>
-"""
-
-st.markdown(html_code, unsafe_allow_html=True)
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 
