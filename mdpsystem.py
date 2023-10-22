@@ -66,9 +66,6 @@ st.markdown(
 st.markdown(
     """
     <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item active">
