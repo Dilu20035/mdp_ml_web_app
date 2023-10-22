@@ -52,6 +52,8 @@ with st.sidebar:
 
 # Define the HTML and JavaScript code for the responsive navbar
 
+import streamlit as st
+
 st.markdown(
     """
     <style>
@@ -59,19 +61,11 @@ st.markdown(
         background-color: #ff5959;
         display: flex;
         justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
     }
 
     .navbar-nav {
         list-style: none;
         display: flex;
-        align-items: center;
-        margin: 0;
-        padding: 0;
     }
 
     .nav-item {
@@ -89,12 +83,6 @@ st.markdown(
             margin: 0 10px;
         }
     }
-
-    @media screen and (max-width: 480px) {
-        .nav-item {
-            margin: 0 5px;
-        }
-    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -105,23 +93,22 @@ st.markdown(
     <nav class="navbar">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/">HOME</a>
+                <a class="nav-link" href="http://localhost:8501/"><b>HOME</b></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8502/">MDP-SYSTEM</a>
+                <a class="nav-link" href="http://localhost:8502/"><b>MDP-SYSTEM</b></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/CONTACT">CONTACT</a>
+                <a class="nav-link" href="http://localhost:8501/CONTACT"><b>CONTACT</b></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/ABOUT">ABOUT</a>
+                <a class="nav-link" href="http://localhost:8501/ABOUT"><b>ABOUT</b></a>
             </li>
         </ul>
     </nav>
     """,
     unsafe_allow_html=True,
 )
-
 
 
 # Diabetes Prediction Page
