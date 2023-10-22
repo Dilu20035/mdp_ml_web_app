@@ -26,7 +26,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Get Help': 'https://bgremoval.streamlit.app/',
         'Report a bug': "https://www.extremelycoolapp.com/bug",
         'About': "# This is a header. This is an *extremely* cool app!"
     }
