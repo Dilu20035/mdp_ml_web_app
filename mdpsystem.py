@@ -21,12 +21,17 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 covid_model = pickle.load(open("covid.pkl", 'rb'))
 
 st.set_page_config(
-    page_title="MDP-Detector",
-    page_icon=":Shark:",
-    layout="centered",
-    initial_sidebar_state="collapsed"
+    page_title="Disease Detector",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'Home': 'https://www.extremelycoolapp.com/help',
+        'MDP-SYSTEM': 'https://www.extremelycoolapp.com/help',
+        'About': "https://www.extremelycoolapp.com/bug",
+        'Contact': "# This is a header. This is an *extremely* cool app!"
+    }
 )
-
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 
