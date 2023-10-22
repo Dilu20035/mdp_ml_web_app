@@ -50,43 +50,58 @@ with st.sidebar:
 
 
 
-# Define the HTML and JavaScript code for the responsive navbar
 
-st.markdown(
-    """
-    <style>
-    .navbar-nav .nav-link:hover {
-        color: #ff5959;  /* Change the color to your desired hover color */
+# Define the navigation bar
+st.markdown("""
+<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+""", unsafe_allow_html=True)
+
+# Add CSS for responsive behavior
+st.markdown("""
+<style>
+/* Adjust padding/margin for smaller screens */
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
     }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
-        <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
-            <ul class="navbar-nav ">
-                <li class="nav-item active">
-                    <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    """,
-    unsafe_allow_html=True
-)
-
+    .navbar .nav-link {
+        padding: 10px 0;
+    }
+}
+/* Hide text on small screens and show icons instead */
+@media (max-width: 576px) {
+    .navbar .nav-link b {
+        display: none;
+    }
+    .navbar .nav-item.active .nav-link:before {
+        font-family: 'FontAwesome';
+        content: "\f015"; /* Add the icon code here */
+        margin-right: 10px;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
 
 
 # Diabetes Prediction Page
