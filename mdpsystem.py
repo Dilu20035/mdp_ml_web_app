@@ -64,7 +64,7 @@ st.markdown(
     }
 
     .navbar-nav {
-        list-style: none;
+        list-style: flex;
         display: flex;
     }
 
