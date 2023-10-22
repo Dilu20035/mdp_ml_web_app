@@ -21,7 +21,7 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 covid_model = pickle.load(open("covid.pkl", 'rb'))
 
 st.set_page_config(
-    client.toolbarMode
+    client.toolbarMode,
     page_title="Disease Detector",
     page_icon="🧊",
     layout="wide",
