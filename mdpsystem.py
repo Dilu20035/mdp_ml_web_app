@@ -51,10 +51,6 @@ with st.sidebar:
 
 
 
-
-
-
-
 # Define the navigation bar
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
