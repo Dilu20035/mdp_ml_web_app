@@ -45,85 +45,86 @@ with st.sidebar:
                           default_index=0)
 
 
-import streamlit as st
 
-st.markdown(
-    """
-    <style>
-    .navbar {
-        background-color: #ff5959;
-        padding: 10px;
-    }
+html_code = """
+<style>
+.navbar {
+    background-color: #ff5959;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
     .nav-links {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .nav-links li {
-        margin: 0 20px;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
-
-    @media screen and (max-width: 768px) {
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .nav-links.active {
-            display: flex;
-        }
+        display: none;
     }
 
     .hamburger {
-        display: none;
-        cursor: pointer;
-        color: white;
-        font-size: 20px;
+        display: block;
     }
 
-    @media screen and (max-width: 768px) {
-        .hamburger {
-            display: block;
-        }
+    .nav-links.active {
+        display: flex;
     }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+}
+</style>
 
-st.markdown('<div class="navbar">', unsafe_allow_html=True)
-st.markdown('<ul class="nav-links">', unsafe_allow_html=True)
-st.markdown('<li><a href="http://localhost:8501/"><b>HOME</b></a></li>', unsafe_allow_html=True)
-st.markdown('<li><a href="http://localhost:8502/"><b>MDP-SYSTEM</b></a></li>', unsafe_allow_html=True)
-st.markdown('<li><a href="http://localhost:8501/CONTACT"><b>CONTACT</b></a></li>', unsafe_allow_html=True)
-st.markdown('<li><a href="http://localhost:8501/ABOUT"><b>ABOUT</b></a></li>', unsafe_allow_html=True)
-st.markdown('</ul>', unsafe_allow_html=True)
-st.markdown('<div class="hamburger">&#9776;</div>', unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
-
-st.markdown(
-    """
-    <script>
+<nav class="navbar">
+    <div class="navbar-header">
+        <span class="hamburger">&#9776;</span>
+    </div>
+    <ul class="nav-links">
+        <li class="nav-item active">
+            <a class="nav-link" href="http://localhost:8501/"><b>HOME</b></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link disabled" href="http://localhost:8502/"><b>MDP-SYSTEM</b></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b>CONTACT</b></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b>ABOUT</b></a>
+        </li>
+    </ul>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
 
     hamburger.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     });
-    </script>
-    """,
-    unsafe_allow_html=True,
-)
+});
+</script>
+"""
+
+st.markdown(html_code, unsafe_allow_html=True)
+
 
 
 # Diabetes Prediction Page
