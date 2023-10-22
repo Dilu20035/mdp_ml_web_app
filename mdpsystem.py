@@ -53,29 +53,34 @@ with st.sidebar:
 # Define the HTML and JavaScript code for the responsive navbar
 
 
-
-
 st.markdown(
     """
     <style>
     .navbar {
         background-color: #ff5959;
-        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
     }
 
-    .nav-links {
+    .navbar ul {
         list-style: none;
         display: flex;
+        margin: 0;
+        padding: 0;
     }
 
-    .nav-links li {
-        margin: 0 15px;
+    .navbar li {
+        margin: 0 20px;
+        position: relative;
     }
 
-    .nav-links a {
+    .navbar a {
         text-decoration: none;
         color: #fff;
         font-weight: bold;
@@ -87,23 +92,37 @@ st.markdown(
         font-size: 24px;
     }
 
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ff5959;
+        padding: 10px 20px;
+    }
+
+    .dropdown a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
     @media screen and (max-width: 768px) {
-        .nav-links {
+        .navbar ul {
             display: none;
             flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            right: 0;
-            background-color: #ff5959;
-            padding: 10px;
         }
 
-        .nav-links.active {
+        .navbar ul.active {
             display: flex;
         }
 
         .hamburger {
+            display: block;
+        }
+
+        .navbar .nav-item:hover .dropdown {
             display: block;
         }
     }
@@ -114,25 +133,36 @@ st.markdown(
 
 st.markdown(
     """
-    <div class="navbar">
+    <nav class="navbar">
         <div class="hamburger" onclick="toggleNav()">&#9776;</div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="http://localhost:8501/"><b>HOME</b></a></li>
-            <li><a href="http://localhost:8502/" class="disabled"><b>MDP-SYSTEM</b></a></li>
-            <li><a href="http://localhost:8501/CONTACT" class="disabled"><b>CONTACT</b></a></li>
-            <li><a href="http://localhost:8501/ABOUT" class="disabled"><b>ABOUT</b></a></li>
+        <ul>
+            <li class="nav-item">
+                <a href="http://localhost:8501/"><b>HOME</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="has-dropdown" href="#"><b>MDP-SYSTEM</b></a>
+                <div class="dropdown">
+                    <a href="http://localhost:8502/" class="disabled">Subitem 1</a>
+                    <a href="http://localhost:8501/CONTACT" class="disabled">Subitem 2</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="http://localhost:8501/CONTACT"><b>CONTACT</b></a>
+            </li>
+            <li class="nav-item">
+                <a href="http://localhost:8501/ABOUT"><b>ABOUT</b></a>
+            </li>
         </ul>
-    </div>
+    </nav>
     <script>
     function toggleNav() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('active');
+        const nav = document.querySelector('.navbar ul');
+        nav.classList.toggle('active');
     }
     </script>
     """,
     unsafe_allow_html=True,
 )
-
 
 
 
