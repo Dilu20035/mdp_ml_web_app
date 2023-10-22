@@ -51,89 +51,96 @@ with st.sidebar:
 
 
 # Define the HTML and JavaScript code for the responsive navbar
+
+
 html_code = """
 <style>
-.navbar {
-    background-color: #ff5959;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
+    .navbar {
+        background-color: #ff5959;
+    }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-right: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
+    .navbar-toggler {
         display: none;
     }
 
-    .hamburger {
-        display: block;
+    .navbar-expand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .nav-links.active {
+    .navbar-nav {
+        list-style: none;
         display: flex;
     }
-}
+
+    .nav-item {
+        margin-right: 20px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+        .navbar-toggler {
+            display: block;
+        }
+
+        .navbar-nav {
+            display: none;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: #ff5959;
+            padding: 10px;
+        }
+        .nav-link {
+            display: block;
+            margin: 10px 0;
+        }
+        .navbar-nav.active {
+            display: flex;
+        }
+    }
 </style>
 
-<nav class="navbar">
-    <div class="navbar-header">
-        <span class="hamburger">&#9776;</span>
+<nav class="navbar navbar-expand navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+    </button>
+    <div class="navbar-nav" id="navbarNav">
+        <li class="nav-item active">
+            <a class="nav-link" href="http://localhost:8501/"><b> HOME </b></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b></a>
+        </li>
     </div>
-    <ul class="nav-links">
-        <li class="nav-item active">
-            <a class="nav-link" href="http://localhost:8501/"><b>HOME</b></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link disabled" href="http://localhost:8502/"><b>MDP-SYSTEM</b></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b>CONTACT</b></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b>ABOUT</b></a>
-        </li>
-    </ul>
 </nav>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarNav = document.querySelector(".navbar-nav");
 
-    hamburger.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
+    navbarToggler.addEventListener("click", function () {
+        navbarNav.classList.toggle("active");
     });
 });
 </script>
 """
 
-# Display the responsive navbar in the Streamlit app
 st.markdown(html_code, unsafe_allow_html=True)
 
 
