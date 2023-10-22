@@ -53,55 +53,35 @@ with st.sidebar:
 # Define the HTML and JavaScript code for the responsive navbar
 
 
+import streamlit as st
+
 st.markdown(
     """
     <style>
     .navbar {
         background-color: #ff5959;
+    }
+
+    .navbar-nav {
         display: flex;
-        justify-content: space-between;
-        padding: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
     }
 
-    .nav-links {
-        list-style: none;
-        display: flex;
+    .nav-item {
+        margin: 0 10px;
     }
 
-    .nav-links li {
-        margin: 0 15px;
-    }
-
-    .nav-links a {
+    .nav-link {
         text-decoration: none;
         color: #fff;
         font-weight: bold;
     }
 
-    .hamburger {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
-    }
-
-    @media (max-width: 768px) {
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            right: 0;
-            background-color: #ff5959;
-            padding: 10px;
-        }
-
-        .nav-links.active {
-            display: flex;
-        }
-
-        .hamburger {
-            display: block;
+    @media screen and (max-width: 768px) {
+        .nav-item {
+            margin: 0 5px;
         }
     }
     </style>
@@ -111,25 +91,25 @@ st.markdown(
 
 st.markdown(
     """
-    <div class="navbar">
-        <div class="hamburger" onclick="toggleNav()">&#9776;</div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="http://localhost:8501/"><b>HOME</b></a></li>
-            <li><a href="http://localhost:8502/" class="disabled"><b>MDP-SYSTEM</b></a></li>
-            <li><a href="http://localhost:8501/CONTACT" class="disabled"><b>CONTACT</b></a></li>
-            <li><a href="http://localhost:8501/ABOUT" class="disabled"><b>ABOUT</b></a></li>
+    <nav class="navbar">
+        <ul class="navbar-nav" navbar-fixed-top>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8501/"><b>HOME</b></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8502/"><b>MDP-SYSTEM</b></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8501/CONTACT"><b>CONTACT</b></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8501/ABOUT"><b>ABOUT</b></a>
+            </li>
         </ul>
-    </div>
-    <script>
-    function toggleNav() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('active');
-    }
-    </script>
+    </nav>
     """,
     unsafe_allow_html=True,
 )
-
 
 
 
