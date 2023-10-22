@@ -54,70 +54,26 @@ with st.sidebar:
 
 
 
-st.markdown(
-    """
-    <style>
-    .navbar {
-        background-color: #ff5959;
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 10px;
-        justify-content: center;
-    }
-
-    .navbar-nav {
-        list-style: none;
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-item {
-        margin: 0 15px;
-    }
-
-    .nav-link {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .nav-item {
-            margin: 0 5px;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-st.markdown(
-    """
-    <nav class="navbar">
-        <ul class="navbar-nav">
+st.markdown("""
+<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
+    <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
+        <ul class="navbar-nav ">
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/">HOME</a>
+                <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8502/">MDP-SYSTEM</a>
+                <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/CONTACT">CONTACT</a>
+                <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/ABOUT">ABOUT</a>
+                <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
             </li>
         </ul>
-    </nav>
-    """,
-    unsafe_allow_html=True,
-)
-
+    </div>
+</nav>
+""", unsafe_allow_html=True)
 
 
 
