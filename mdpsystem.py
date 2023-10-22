@@ -56,7 +56,6 @@ st.write(greeting, user_name, punctuation)
 foo = 'bar'
 st.write('Done!')
 
-
 # sidebar for navigation
 with st.sidebar:
     
