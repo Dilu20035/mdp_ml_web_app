@@ -103,9 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelectorAll(".nav-link");
 
-    hamburger.addEventListener("click", function () {
-        navLinks.forEach(function (link) {
-            link.classList.toggle("active");
+hamburger.addEventListener("click", function () {
+    navLinks.forEach(function (link) {
+    link.classList.toggle("active");
         });
     });
 });
