@@ -61,7 +61,7 @@ st.markdown(
         background-color: #ff5959;
         display: flex;
         justify-content: center;
-        align-items: center;
+        
         position: fixed;
         top: 0;
         left: 0;
