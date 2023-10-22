@@ -53,6 +53,7 @@ with st.sidebar:
 # Define the HTML and JavaScript code for the responsive navbar
 
 
+
 st.markdown(
     """
     <style>
@@ -64,6 +65,7 @@ st.markdown(
         left: 0;
         right: 0;
         padding: 10px;
+        justify-content: center;
     }
 
     .navbar-nav {
@@ -115,6 +117,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
 
 
 
