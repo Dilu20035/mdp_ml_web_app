@@ -45,27 +45,74 @@ with st.sidebar:
                           default_index=0)
 
 
-st.markdown("""
-<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959; position: fixed; top: 0; width: 100%;">
-    <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
-        <ul class="navbar-nav ">
+html_code = """
+<style>
+.navbar {
+    background-color: #ff5959;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-link {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-link.active {
+        display: block;
+    }
+}
+</style>
+
+<nav class="navbar fixed-top navbar-expand navbar-dark">
+    <div class="navbar-header">
+        <span class="hamburger">&#9776;</span>
+    </div>
+    <div class="collapse navbar-collapse justify-content-center align-items-center">
+        <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost:8501/"><b> HOME </b></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b> <span class="sr-only">(current)</span></a>
+                <a class="nav-link disabled" href="http://localhost:8501/CONTACT" target="_self"><b> CONTACT </b></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link disabled" href="http://localhost:8501/ABOUT" target="_self"><b> ABOUT </b></a>
             </li>
         </ul>
     </div>
 </nav>
-""", unsafe_allow_html=True)
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelectorAll(".nav-link");
 
+    hamburger.addEventListener("click", function () {
+        navLinks.forEach(function (link) {
+            link.classList.toggle("active");
+        });
+    });
+});
+</script>
+"""
+
+st.markdown(html_code, unsafe_allow_html=True)
 
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
