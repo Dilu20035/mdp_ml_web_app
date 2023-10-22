@@ -54,12 +54,13 @@ with st.sidebar:
 
 
 
+
 st.markdown(
     """
     <style>
     .navbar {
         background-color: #ff5959;
-        padding: 10px 20px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -114,8 +115,8 @@ st.markdown(
 st.markdown(
     """
     <div class="navbar">
-        <div class="hamburger">&#9776;</div>
-        <ul class="nav-links">
+        <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="http://localhost:8501/"><b>HOME</b></a></li>
             <li><a href="http://localhost:8502/" class="disabled"><b>MDP-SYSTEM</b></a></li>
             <li><a href="http://localhost:8501/CONTACT" class="disabled"><b>CONTACT</b></a></li>
@@ -123,18 +124,15 @@ st.markdown(
         </ul>
     </div>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
-    });
+    function toggleNav() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    }
     </script>
     """,
     unsafe_allow_html=True,
 )
+
 
 
 
