@@ -52,7 +52,6 @@ with st.sidebar:
 
 # Define the HTML and JavaScript code for the responsive navbar
 
-
 import streamlit as st
 
 st.markdown(
@@ -60,23 +59,32 @@ st.markdown(
     <style>
     .navbar {
         background-color: #ff5959;
-    }
-
-    .navbar-nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         padding: 10px;
     }
 
+    .navbar-nav {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
     .nav-item {
-        margin: 0 10px;
+        margin: 0 15px;
     }
 
     .nav-link {
         text-decoration: none;
         color: #fff;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     @media screen and (max-width: 768px) {
@@ -92,25 +100,24 @@ st.markdown(
 st.markdown(
     """
     <nav class="navbar">
-        <ul class="navbar-nav" navbar-fixed-top>
+        <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/"><b>HOME</b></a>
+                <a class="nav-link" href="http://localhost:8501/">HOME</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8502/"><b>MDP-SYSTEM</b></a>
+                <a class="nav-link" href="http://localhost:8502/">MDP-SYSTEM</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/CONTACT"><b>CONTACT</b></a>
+                <a class="nav-link" href="http://localhost:8501/CONTACT">CONTACT</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/ABOUT"><b>ABOUT</b></a>
+                <a class="nav-link" href="http://localhost:8501/ABOUT">ABOUT</a>
             </li>
         </ul>
     </nav>
     """,
     unsafe_allow_html=True,
 )
-
 
 
 
