@@ -52,7 +52,6 @@ with st.sidebar:
 
 # Define the HTML and JavaScript code for the responsive navbar
 
-import streamlit as st
 
 st.markdown(
     """
@@ -64,12 +63,13 @@ st.markdown(
     }
 
     .navbar-nav {
-        list-style: flex;
+        list-style: none;
         display: flex;
     }
 
     .nav-item {
         margin: 0 15px;
+        display: flex;
     }
 
     .nav-link {
