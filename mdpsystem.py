@@ -20,6 +20,22 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
 covid_model = pickle.load(open("covid.pkl", 'rb'))
 
+
+
+
+st.set_page_config(
+    page_title="Disease Detector",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 # Define the navigation bar
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959; border-radius: 5px;">
@@ -71,22 +87,6 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-
-
-st.set_page_config(
-    page_title="Disease Detector",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
-
-st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
-
 
 # sidebar for navigation
 with st.sidebar:
