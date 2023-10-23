@@ -326,7 +326,7 @@ if (selected == 'Covid Prediction'):
 # Define the navigation bar
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959; border-radius: 5px;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
