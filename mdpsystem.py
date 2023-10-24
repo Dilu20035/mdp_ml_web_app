@@ -26,7 +26,7 @@ covid_model = pickle.load(open("covid.pkl", 'rb'))
 st.set_page_config(
     page_title="Disease Detector",
     page_icon="🧊",
-    layout="wide",
+    layout="auto",
     initial_sidebar_state="collapsed",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -34,16 +34,12 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-# Define the navigation bar
 st.markdown("""
-<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959; border-radius: 5px;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
     <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ">
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link " href="http://localhost:8501/"><b> HOME </b><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link disabled" href="http://localhost:8502/"><b> MDP-SYSTEM </b><span class="sr-only">(current)</span></a>
@@ -57,33 +53,6 @@ st.markdown("""
         </ul>
     </div>
 </nav>
-""", unsafe_allow_html=True)
-
-# Add CSS for responsive behavior
-st.markdown("""
-<style>
-/* Adjust padding/margin for smaller screens */
-@media (max-width: 768px) {
-    .navbar .navbar-nav {
-        text-align: center;
-        margin-top: 10px;
-    }
-    .navbar .nav-link {
-        padding: 10px 0;
-    }
-}
-/* Hide text on small screens and show icons instead */
-@media (max-width: 576px) {
-    .navbar .nav-link b {
-        display: none;
-    }
-    .navbar .nav-item.active .nav-link:before {
-        font-family: 'FontAwesome';
-        content: "\f015"; /* Add the icon code here */
-        margin-right: 10px;
-    }
-}
-</style>
 """, unsafe_allow_html=True)
 
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
