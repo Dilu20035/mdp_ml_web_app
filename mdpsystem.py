@@ -26,7 +26,7 @@ covid_model = pickle.load(open("covid.pkl", 'rb'))
 st.set_page_config(
     page_title="Disease Detector",
     page_icon="🧊",
-    layout="auto",
+    layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -34,6 +34,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #ff5959;">
     <div class="collapse navbar-collapse justify-content-center align-items-center " id="navbarNav">
@@ -53,7 +54,8 @@ st.markdown("""
         </ul>
     </div>
 </nav>
-""", unsafe_allow_html=True)
+""", 
+unsafe_allow_html=True)
 
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
